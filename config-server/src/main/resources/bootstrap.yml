@@ -1,0 +1,23 @@
+
+
+eureka:
+  client:
+    service-url:
+      defaultZone: http://wuyunfeng:wuyunfeng@localhost:8761/eureka/
+
+server:
+  port: 8888
+spring:
+  application:
+    name: config-server
+  cloud:
+    config:
+      server:
+        git:
+          uri: https://gitee.com/yunfengxc/spring-cloud-config.git
+          username: 469901870@qq.com
+          password: wgl812893
+      label: master
+
+
+

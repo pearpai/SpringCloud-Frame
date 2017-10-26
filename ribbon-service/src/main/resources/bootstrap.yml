@@ -1,0 +1,13 @@
+
+
+eureka:
+  client:
+    service-url:
+      defaultZone: http://wuyunfeng:wuyunfeng@localhost:8761/eureka/
+
+server:
+  port: 8082
+spring:
+  application:
+    name: ribbon-service
+

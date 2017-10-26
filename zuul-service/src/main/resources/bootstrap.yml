@@ -1,0 +1,35 @@
+eureka:
+  client:
+    service-url:
+      defaultZone: http://wuyunfeng:wuyunfeng@localhost:8761/eureka/
+
+server:
+  port: 8084
+spring:
+  application:
+    name: zuul-service
+
+# 网管服务 配置
+zuul:
+  routes:
+    api-a:
+      path: /api-a/**
+      serviceId: ribbon-service
+    api-b:
+      path: /api-b/**
+      serviceId: feign-service
+  host:
+    connect-timeout-millis: 10000
+
+# 首次请求超时 设置
+hystrix:
+  command:
+    default:
+      execution:
+        isolation:
+          thread:
+            timeoutInMilliseconds: 60000
+
+
+
+
