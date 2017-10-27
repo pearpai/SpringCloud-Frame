@@ -3,29 +3,23 @@ spring:
     name: eureka-client-1
 
 ---
+eureka:
+  client:
+    service-url:
+      defaultZone: http://wuyunfeng:wuyunfeng@localhost:8761/eureka/
+
 spring:
   profiles: dev
   cloud:
     config:
-      uri: http://localhost:8888
+      discovery:
+        enabled: true
+        service-id: config-server
+  rabbitmq:
+    host: localhost
+    port: 5672
 
-#eureka:
-#  client:
-#    service-url:
-#      defaultZone: http://wuyunfeng:wuyunfeng@localhost:8761/eureka/
-
-#server:
-#  port: 8080
-#spring:
-#  application:
-#    name: eureka-client-1
-
-#spring:
-#  application:
-#    name: eureka-client-1
-#  profile: dev
-#  cloud:
-#    config:
-#      uri: http://localhost:8888
-
+management:
+  security:
+    enabled: false
 

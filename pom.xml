@@ -34,6 +34,9 @@
         <module>ribbon-service</module>
         <module>feign-service</module>
         <module>zuul-service</module>
+        <module>zipkin-server</module>
+        <module>zipkin-hi-client</module>
+        <module>zipkin-miya-client</module>
     </modules>
 
 
